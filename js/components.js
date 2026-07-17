@@ -41,10 +41,9 @@
   }
 
   // 主流程：加载组件 → 注入 DOM → 设置 active → 加载 main.js
-  Promise.all([
-    loadComponent('components/header.html', 'site-header'),
-    loadComponent('components/footer.html', 'site-footer')
-  ]).then(function() {
+  Promise.all
+   loadComponent('components/footer.html', 'site-footer')
+  .then(function() {
     setActiveNav();
     loadMainScript();
   }).catch(function(err) {
